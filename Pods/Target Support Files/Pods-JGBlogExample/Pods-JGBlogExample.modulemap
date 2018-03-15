@@ -1,0 +1,6 @@
+framework module Pods_JGBlogExample {
+  umbrella header "Pods-JGBlogExample-umbrella.h"
+
+  export *
+  module * { export * }
+}

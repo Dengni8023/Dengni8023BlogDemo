@@ -1,0 +1,465 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A23757A22CD73D23B2F1A10C /* Pods_JGBlogExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC5E2554BF3F985C013AE20A /* Pods_JGBlogExample.framework */; };
+		D460BB782056170200C2A568 /* KVC_KVOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D460BB772056170200C2A568 /* KVC_KVOViewController.m */; };
+		D460BB7B20561A6600C2A568 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = D460BB7A20561A6600C2A568 /* Person.m */; };
+		D460BB7E20561E0200C2A568 /* KVCPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = D460BB7D20561E0200C2A568 /* KVCPerson.m */; };
+		D460BB8220561E3700C2A568 /* Company.m in Sources */ = {isa = PBXBuildFile; fileRef = D460BB8120561E3700C2A568 /* Company.m */; };
+		D48537FC204F961000795173 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D48537FB204F961000795173 /* AppDelegate.m */; };
+		D4853804204F961000795173 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4853803204F961000795173 /* Assets.xcassets */; };
+		D485380A204F961000795173 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D4853809204F961000795173 /* main.m */; };
+		D4853811204FBD5100795173 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4853810204FBD5100795173 /* LaunchScreen.storyboard */; };
+		D4853814204FC9BC00795173 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4853813204FC9BC00795173 /* TableViewController.m */; };
+		D4C975F02058B9E100581409 /* Book.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C975EF2058B9E100581409 /* Book.m */; };
+		D4C975F32058BCF400581409 /* KVOBook.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C975F22058BCF400581409 /* KVOBook.m */; };
+		D4C975F62059228700581409 /* ExampleTableData.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C975F52059228700581409 /* ExampleTableData.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D460BB762056170200C2A568 /* KVC_KVOViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVC_KVOViewController.h; sourceTree = "<group>"; };
+		D460BB772056170200C2A568 /* KVC_KVOViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVC_KVOViewController.m; sourceTree = "<group>"; };
+		D460BB7920561A6600C2A568 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		D460BB7A20561A6600C2A568 /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		D460BB7C20561E0200C2A568 /* KVCPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVCPerson.h; sourceTree = "<group>"; };
+		D460BB7D20561E0200C2A568 /* KVCPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVCPerson.m; sourceTree = "<group>"; };
+		D460BB8020561E3700C2A568 /* Company.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Company.h; sourceTree = "<group>"; };
+		D460BB8120561E3700C2A568 /* Company.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Company.m; sourceTree = "<group>"; };
+		D48537F7204F961000795173 /* JGBlogExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JGBlogExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D48537FA204F961000795173 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D48537FB204F961000795173 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D4853803204F961000795173 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D4853808204F961000795173 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4853809204F961000795173 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D4853810204FBD5100795173 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D4853812204FC9BC00795173 /* TableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		D4853813204FC9BC00795173 /* TableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		D4C975EE2058B9E100581409 /* Book.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Book.h; sourceTree = "<group>"; };
+		D4C975EF2058B9E100581409 /* Book.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Book.m; sourceTree = "<group>"; };
+		D4C975F12058BCF400581409 /* KVOBook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVOBook.h; sourceTree = "<group>"; };
+		D4C975F22058BCF400581409 /* KVOBook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVOBook.m; sourceTree = "<group>"; };
+		D4C975F42059228700581409 /* ExampleTableData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExampleTableData.h; sourceTree = "<group>"; };
+		D4C975F52059228700581409 /* ExampleTableData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExampleTableData.m; sourceTree = "<group>"; };
+		D6CC9056BF1B459F77163BFC /* Pods-JGBlogExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JGBlogExample.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-JGBlogExample/Pods-JGBlogExample.debug.xcconfig"; sourceTree = "<group>"; };
+		DBEBD60927313FAA3F88DBCF /* Pods-JGBlogExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JGBlogExample.release.xcconfig"; path = "../Pods/Target Support Files/Pods-JGBlogExample/Pods-JGBlogExample.release.xcconfig"; sourceTree = "<group>"; };
+		FC5E2554BF3F985C013AE20A /* Pods_JGBlogExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JGBlogExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D48537F4204F961000795173 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A23757A22CD73D23B2F1A10C /* Pods_JGBlogExample.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2A8093890D6BDB7E708F4354 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D6CC9056BF1B459F77163BFC /* Pods-JGBlogExample.debug.xcconfig */,
+				DBEBD60927313FAA3F88DBCF /* Pods-JGBlogExample.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D460BB7F20561E2200C2A568 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				D4C975EE2058B9E100581409 /* Book.h */,
+				D4C975EF2058B9E100581409 /* Book.m */,
+				D460BB8020561E3700C2A568 /* Company.h */,
+				D460BB8120561E3700C2A568 /* Company.m */,
+				D4C975F42059228700581409 /* ExampleTableData.h */,
+				D4C975F52059228700581409 /* ExampleTableData.m */,
+				D460BB7920561A6600C2A568 /* Person.h */,
+				D460BB7A20561A6600C2A568 /* Person.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		D48537EE204F961000795173 = {
+			isa = PBXGroup;
+			children = (
+				D48537F9204F961000795173 /* JGBlogExample */,
+				D48537F8204F961000795173 /* Products */,
+				2A8093890D6BDB7E708F4354 /* Pods */,
+				FCD5C6C46F1C7174222C771E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D48537F8204F961000795173 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D48537F7204F961000795173 /* JGBlogExample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D48537F9204F961000795173 /* JGBlogExample */ = {
+			isa = PBXGroup;
+			children = (
+				D4853815204FC9D600795173 /* Classes */,
+				D48537FA204F961000795173 /* AppDelegate.h */,
+				D48537FB204F961000795173 /* AppDelegate.m */,
+				D4853812204FC9BC00795173 /* TableViewController.h */,
+				D4853813204FC9BC00795173 /* TableViewController.m */,
+				D4853803204F961000795173 /* Assets.xcassets */,
+				D4853808204F961000795173 /* Info.plist */,
+				D4853810204FBD5100795173 /* LaunchScreen.storyboard */,
+				D4853809204F961000795173 /* main.m */,
+			);
+			path = JGBlogExample;
+			sourceTree = "<group>";
+		};
+		D4853815204FC9D600795173 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D460BB7F20561E2200C2A568 /* Base */,
+				D4E00B4C204FE62300B31169 /* KVC_KVO */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		D4E00B4C204FE62300B31169 /* KVC_KVO */ = {
+			isa = PBXGroup;
+			children = (
+				D460BB762056170200C2A568 /* KVC_KVOViewController.h */,
+				D460BB772056170200C2A568 /* KVC_KVOViewController.m */,
+				D460BB7C20561E0200C2A568 /* KVCPerson.h */,
+				D460BB7D20561E0200C2A568 /* KVCPerson.m */,
+				D4C975F12058BCF400581409 /* KVOBook.h */,
+				D4C975F22058BCF400581409 /* KVOBook.m */,
+			);
+			path = KVC_KVO;
+			sourceTree = "<group>";
+		};
+		FCD5C6C46F1C7174222C771E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FC5E2554BF3F985C013AE20A /* Pods_JGBlogExample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D48537F6204F961000795173 /* JGBlogExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D485380D204F961000795173 /* Build configuration list for PBXNativeTarget "JGBlogExample" */;
+			buildPhases = (
+				A2951B0C4343D4F36D24F04F /* [CP] Check Pods Manifest.lock */,
+				D48537F3204F961000795173 /* Sources */,
+				D48537F4204F961000795173 /* Frameworks */,
+				D48537F5204F961000795173 /* Resources */,
+				2308719A2CD312AD85BF3989 /* [CP] Embed Pods Frameworks */,
+				3C53EBA6B5FD453C3E13B5DE /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JGBlogExample;
+			productName = JGBlogExample;
+			productReference = D48537F7204F961000795173 /* JGBlogExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D48537EF204F961000795173 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = MeiJigao;
+				TargetAttributes = {
+					D48537F6204F961000795173 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = D48537F2204F961000795173 /* Build configuration list for PBXProject "JGBlogExample" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D48537EE204F961000795173;
+			productRefGroup = D48537F8204F961000795173 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D48537F6204F961000795173 /* JGBlogExample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D48537F5204F961000795173 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4853804204F961000795173 /* Assets.xcassets in Resources */,
+				D4853811204FBD5100795173 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2308719A2CD312AD85BF3989 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/../Pods/Target Support Files/Pods-JGBlogExample/Pods-JGBlogExample-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/FLAnimatedImage/FLAnimatedImage.framework",
+				"${BUILT_PRODUCTS_DIR}/JGAlertController/JGAlertController.framework",
+				"${BUILT_PRODUCTS_DIR}/JGNetworkReachability/JGNetworkReachability.framework",
+				"${BUILT_PRODUCTS_DIR}/JGPhotoBrowser/JGPhotoBrowser.framework",
+				"${BUILT_PRODUCTS_DIR}/JGSourceBase/JGSourceBase.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FLAnimatedImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JGAlertController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JGNetworkReachability.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JGPhotoBrowser.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JGSourceBase.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-JGBlogExample/Pods-JGBlogExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3C53EBA6B5FD453C3E13B5DE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-JGBlogExample/Pods-JGBlogExample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A2951B0C4343D4F36D24F04F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JGBlogExample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D48537F3204F961000795173 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D460BB782056170200C2A568 /* KVC_KVOViewController.m in Sources */,
+				D4C975F62059228700581409 /* ExampleTableData.m in Sources */,
+				D485380A204F961000795173 /* main.m in Sources */,
+				D4C975F32058BCF400581409 /* KVOBook.m in Sources */,
+				D460BB7B20561A6600C2A568 /* Person.m in Sources */,
+				D460BB7E20561E0200C2A568 /* KVCPerson.m in Sources */,
+				D4C975F02058B9E100581409 /* Book.m in Sources */,
+				D48537FC204F961000795173 /* AppDelegate.m in Sources */,
+				D4853814204FC9BC00795173 /* TableViewController.m in Sources */,
+				D460BB8220561E3700C2A568 /* Company.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		D485380B204F961000795173 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D485380C204F961000795173 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D485380E204F961000795173 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6CC9056BF1B459F77163BFC /* Pods-JGBlogExample.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 27ZN797VLM;
+				INFOPLIST_FILE = JGBlogExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.MeiJigao.JGBlogExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D485380F204F961000795173 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DBEBD60927313FAA3F88DBCF /* Pods-JGBlogExample.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 27ZN797VLM;
+				INFOPLIST_FILE = JGBlogExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.MeiJigao.JGBlogExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D48537F2204F961000795173 /* Build configuration list for PBXProject "JGBlogExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D485380B204F961000795173 /* Debug */,
+				D485380C204F961000795173 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D485380D204F961000795173 /* Build configuration list for PBXNativeTarget "JGBlogExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D485380E204F961000795173 /* Debug */,
+				D485380F204F961000795173 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D48537EF204F961000795173 /* Project object */;
+}
