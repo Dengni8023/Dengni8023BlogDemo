@@ -24,7 +24,7 @@
 
 + (BOOL)automaticallyNotifiesObserversForKey:(NSString *)key {
     
-    //JGLog(@"%s : %@", __PRETTY_FUNCTION__, key);
+    //JGSCLog(@"%s : %@", __PRETTY_FUNCTION__, key);
     if ([key isEqualToString:@"name"]) {
         return NO;
     }
@@ -35,13 +35,13 @@
 + (BOOL)automaticallyNotifiesObserversOfName {
     
     // 禁止自动通知
-    //JGLog(@"%s", __PRETTY_FUNCTION__);
+    //JGSCLog(@"%s", __PRETTY_FUNCTION__);
     return YES;
 }
 
 + (NSSet<NSString *> *)keyPathsForValuesAffectingValueForKey:(NSString *)key {
     
-    //JGLog(@"%s : %@", __PRETTY_FUNCTION__, key);
+    //JGSCLog(@"%s : %@", __PRETTY_FUNCTION__, key);
     if ([key isEqualToString:@"discount"]) {
         return [NSSet setWithObjects:@"price", nil];
     }
@@ -50,7 +50,7 @@
 }
 
 + (NSSet *)keyPathsForValuesAffectingDiscount {
-    //JGLog(@"%s", __PRETTY_FUNCTION__);
+    //JGSCLog(@"%s", __PRETTY_FUNCTION__);
     return [NSSet setWithObjects:@"price", nil];
 }
 

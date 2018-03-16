@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import <JGSourceBase/JGSourceBase.h>
-#import "TableViewController.h"
+#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -19,10 +19,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    JGEnableLogWithMode(JGLogModeFunc);
+    JGSCEnableLogWithMode(JGSCLogModeFunc);
     
     _window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    _window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[TableViewController alloc] init]];
+    _window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[ViewController alloc] init]];
     [_window makeKeyAndVisible];
     
     return YES;

@@ -33,7 +33,7 @@
 
 - (void)dealloc {
     
-    JGLog(@"<%@: %p>", NSStringFromClass([self class]), self);
+    JGSCLog(@"<%@: %p>", NSStringFromClass([self class]), self);
 }
 
 #pragma mark - Data
@@ -85,10 +85,10 @@
 - (NSString *)identifierNumberWithFormatBirthdate:(NSString *)birth {
     
     NSMutableString *identifier = [@(arc4random() % 10 + 1) stringValue].mutableCopy;
-    [identifier appendFormat:@"%05zd", arc4random() % 100000];
+    [identifier appendFormat:@"%05ud", arc4random() % 100000];
     
     [identifier appendString:birth];
-    [identifier appendFormat:@"%04zd", arc4random() % 10000];
+    [identifier appendFormat:@"%04ud", arc4random() % 10000];
     
     return identifier.copy;
 }

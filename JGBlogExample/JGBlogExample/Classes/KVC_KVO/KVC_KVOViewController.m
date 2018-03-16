@@ -8,7 +8,7 @@
 
 #import "KVC_KVOViewController.h"
 #import <JGSourceBase/JGSourceBase.h>
-#import "ExampleTableData.h"
+#import "JGDemoTableData.h"
 #import "KVCPerson.h"
 #import "KVOBook.h"
 
@@ -17,7 +17,7 @@
     KVOBook *memberBook;
 }
 
-@property (nonatomic, strong, readonly) NSArray<ExampleTableSectionInfo *> *exampleData;
+@property (nonatomic, strong) NSArray<JGDemoTableSectionData *> *demoData;
 
 @property (nonatomic, strong) KVOBook *propertyBook;
 
@@ -61,39 +61,39 @@ static void * KVOContext = 0;
 
 - (void)initDatas {
     
-    _exampleData = @[
-                     ExampleTableSectionMake(@"常规读写",
-                                             @[
-                                               ExampleTableRowMake(@"常规Get、Set读写", @selector(personGetterSetterFunction)),
-                                               ExampleTableRowMake(@"KVC读写", @selector(personKVCGettSetterFunction)),
-                                               ]),
-                     ExampleTableSectionMake(@"KVC键值搜索",
-                                             @[
-                                               ExampleTableRowMake(@"KVC Set属性键值搜索", @selector(personKVCSetSearchFunction)),
-                                               ExampleTableRowMake(@"KVC Get属性键值搜索", @selector(personKVCGetSearchFunction)),
-                                               ]),
-                     ExampleTableSectionMake(@"KVC可变属性",
-                                             @[
-                                               ExampleTableRowMake(@"有序 集合属性读取、修改", @selector(personKVCMutableArrayFunction)),
-                                               ExampleTableRowMake(@"无序 集合属性读取、修改", @selector(personKVCMutableSetFunction)),
-                                               ]),
-                     ExampleTableSectionMake(@"KVC集合方法",
-                                             @[
-                                               ExampleTableRowMake(@"KVC集合方法-简单方法", @selector(personKVCFuncCalculateFuntion)),
-                                               ExampleTableRowMake(@"KVC集合方法-对象方法", @selector(personKVCFuncObjectFuntion)),
-                                               ExampleTableRowMake(@"KVC集合方法-集合方法", @selector(personKVCFuncCollectFuntion)),
-                                               ]),
-                     ExampleTableSectionMake(@"KVO-KVB",
-                                             @[
-                                               ExampleTableRowMake(@"KVO-KVB添加移除测试-页面推出时移除", @selector(bookKVOObserverAddRemoveFunction)),
-                                               ExampleTableRowMake(@"KVO值变化测试", @selector(bookKVOObserverValueChangeFunction)),
-                                               ]),
-                     ];
+    _demoData = @[
+                  JGDemoTableSectionMake(@"常规读写",
+                                         @[
+                                           JGDemoTableRowMakeSelector(@"常规Get、Set读写", @selector(personGetterSetterFunction)),
+                                           JGDemoTableRowMakeSelector(@"KVC读写", @selector(personKVCGettSetterFunction)),
+                                           ]),
+                  JGDemoTableSectionMake(@"KVC键值搜索",
+                                         @[
+                                           JGDemoTableRowMakeSelector(@"KVC Set属性键值搜索", @selector(personKVCSetSearchFunction)),
+                                           JGDemoTableRowMakeSelector(@"KVC Get属性键值搜索", @selector(personKVCGetSearchFunction)),
+                                           ]),
+                  JGDemoTableSectionMake(@"KVC可变属性",
+                                         @[
+                                           JGDemoTableRowMakeSelector(@"有序 集合属性读取、修改", @selector(personKVCMutableArrayFunction)),
+                                           JGDemoTableRowMakeSelector(@"无序 集合属性读取、修改", @selector(personKVCMutableSetFunction)),
+                                           ]),
+                  JGDemoTableSectionMake(@"KVC集合方法",
+                                         @[
+                                           JGDemoTableRowMakeSelector(@"KVC集合方法-简单方法", @selector(personKVCFuncCalculateFuntion)),
+                                           JGDemoTableRowMakeSelector(@"KVC集合方法-对象方法", @selector(personKVCFuncObjectFuntion)),
+                                           JGDemoTableRowMakeSelector(@"KVC集合方法-集合方法", @selector(personKVCFuncCollectFuntion)),
+                                           ]),
+                  JGDemoTableSectionMake(@"KVO-KVB",
+                                         @[
+                                           JGDemoTableRowMakeSelector(@"KVO-KVB添加移除测试-页面推出时移除", @selector(bookKVOObserverAddRemoveFunction)),
+                                           JGDemoTableRowMakeSelector(@"KVO值变化测试", @selector(bookKVOObserverValueChangeFunction)),
+                                           ]),
+                  ];
 }
 
 - (void)dealloc {
     
-    JGLog(@"<%@: %p>, %@", NSStringFromClass([self class]), self, self.title);
+    JGSCLog(@"<%@: %p>, %@", NSStringFromClass([self class]), self, self.title);
     
     [memberBook removeObserver:self forKeyPath:@"name"];
     [memberBook removeObserver:self forKeyPath:@"name"];
@@ -115,7 +115,7 @@ static void * KVOContext = 0;
     self.tableView.sectionHeaderHeight = 44;
     self.tableView.tableFooterView = [[UIView alloc] init];
     
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:JGReuseIdentifier(UITableViewCell)];
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:JGSCReuseIdentifier(UITableViewCell)];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -125,19 +125,19 @@ static void * KVOContext = 0;
 
 #pragma mark - UITableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return self.exampleData.count;
+    return self.demoData.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.exampleData[section].rows.count;
+    return self.demoData[section].rows.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:JGReuseIdentifier(UITableViewCell) forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:JGSCReuseIdentifier(UITableViewCell) forIndexPath:indexPath];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
-    cell.textLabel.text = self.exampleData[indexPath.section].rows[indexPath.row].title;
+    cell.textLabel.text = self.demoData[indexPath.section].rows[indexPath.row].title;
     
     return cell;
 }
@@ -145,14 +145,14 @@ static void * KVOContext = 0;
 #pragma mark - UITableViewDelegate
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     
-    return self.exampleData[section].title;
+    return self.demoData[section].title;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
     
-    SEL selctor = self.exampleData[indexPath.section].rows[indexPath.row].selector;
-    if ([self respondsToSelector:selctor]) {
+    SEL selctor = self.demoData[indexPath.section].rows[indexPath.row].selector;
+    if (selctor && [self respondsToSelector:selctor]) {
         
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
@@ -180,19 +180,19 @@ static void * KVOContext = 0;
     p.interest = @[@"Setter-Interest_1", @"Setter-Interest_2"];
     p.ownedBooks = [NSSet setWithArray:@[@"Setter-Book_1", @"Setter-Book_2", @"Setter-Book_3"]];
     
-    JGLog(@"\nName = %@;"
-          "\nID NO. = %@;"
-          "\nAge = %zd;"
-          "\nCompany = <Name : %@; Telphone : %@>"
-          "\nInterest = %@"
-          "\nBooks = %@",
-          p.name,
-          p.idNumber,
-          p.age,
-          p.company.name, p.company.telphone,
-          p.interest,
-          p.ownedBooks
-          );
+    JGSCLog(@"\nName = %@;"
+            "\nID NO. = %@;"
+            "\nAge = %zd;"
+            "\nCompany = <Name : %@; Telphone : %@>"
+            "\nInterest = %@"
+            "\nBooks = %@",
+            p.name,
+            p.idNumber,
+            p.age,
+            p.company.name, p.company.telphone,
+            p.interest,
+            p.ownedBooks
+            );
 }
 
 // 使用KVC方法，property不需要公有（内部声明的私有Property、成员变量均可）
@@ -212,19 +212,19 @@ static void * KVOContext = 0;
     [p setValue:@[@"KVC-Interest_1", @"KVC-Interest_2"] forKey:@"interest"];
     [p setValue:[NSSet setWithArray:@[@"KVC-Book_1", @"KVC-Book_2", @"KVC-Book_3"]] forKey:@"ownedBooks"];
     
-    JGLog(@"\nName = %@;"
-          "\nID NO. = %@;"
-          "\nAge = %@;"
-          "\nCompany = <Name : %@; Telphone : %@>"
-          "\nInterest = %@"
-          "\nBooks = %@",
-          [p valueForKey:@"name"],
-          [p valueForKey:@"idNumber"],
-          [p valueForKey:@"age"],
-          [p valueForKeyPath:@"company.name"], [p valueForKeyPath:@"company.telphone"],
-          [p valueForKey:@"interest"],
-          [p valueForKey:@"ownedBooks"]
-          );
+    JGSCLog(@"\nName = %@;"
+            "\nID NO. = %@;"
+            "\nAge = %@;"
+            "\nCompany = <Name : %@; Telphone : %@>"
+            "\nInterest = %@"
+            "\nBooks = %@",
+            [p valueForKey:@"name"],
+            [p valueForKey:@"idNumber"],
+            [p valueForKey:@"age"],
+            [p valueForKeyPath:@"company.name"], [p valueForKeyPath:@"company.telphone"],
+            [p valueForKey:@"interest"],
+            [p valueForKey:@"ownedBooks"]
+            );
 }
 
 // KVC Set键值搜索
@@ -233,15 +233,15 @@ static void * KVOContext = 0;
     KVCPerson *p = [[KVCPerson alloc] initWithName:@"姓名" birthdate:@"2017-01-01"];
     [p setValue:@"KVC-姓名" forKey:@"nameSetString"];
     
-    JGLog(@"\nName = %@;"
-          "\nID NO. = %@;"
-          "\nAge = %@;"
-          "\nNameSetString = %@",
-          [p valueForKey:@"name"],
-          [p valueForKey:@"idNumber"],
-          [p valueForKey:@"age"],
-          [p valueForKey:@"nameSetString"]
-          );
+    JGSCLog(@"\nName = %@;"
+            "\nID NO. = %@;"
+            "\nAge = %@;"
+            "\nNameSetString = %@",
+            [p valueForKey:@"name"],
+            [p valueForKey:@"idNumber"],
+            [p valueForKey:@"age"],
+            [p valueForKey:@"nameSetString"]
+            );
 }
 
 // KVC Get键值搜索
@@ -250,15 +250,15 @@ static void * KVOContext = 0;
     KVCPerson *p = [[KVCPerson alloc] initWithName:@"姓名" birthdate:@"2017-01-01"];
     [p setValue:@[@"KVC-Interest_1", @"KVC-Interest_2"] forKey:@"interest"];
     
-    JGLog(@"\nName = %@;"
-          "\nID NO. = %@;"
-          "\nAge = %@;"
-          "\nInterestCollect = %@",
-          [p valueForKey:@"name"],
-          [p valueForKey:@"idNumber"],
-          [p valueForKey:@"age"],
-          [p valueForKey:@"interestCollect"]
-          );
+    JGSCLog(@"\nName = %@;"
+            "\nID NO. = %@;"
+            "\nAge = %@;"
+            "\nInterestCollect = %@",
+            [p valueForKey:@"name"],
+            [p valueForKey:@"idNumber"],
+            [p valueForKey:@"age"],
+            [p valueForKey:@"interestCollect"]
+            );
 }
 
 // KVC获取集合
@@ -272,19 +272,19 @@ static void * KVOContext = 0;
     NSMutableArray *multiModify = [p mutableArrayValueForKey:@"interest"];
     [multiModify addObject:@"Add Interest-1"];
     
-    JGLog(@"\nName = %@;"
-          "\nID NO. = %@;"
-          "\nInterest = %@"
-          "\nOri Interest = %@;"
-          "\nMulti Interest = %@"
-          "\nModify Interest = %@",
-          [p valueForKey:@"name"],
-          [p valueForKey:@"idNumber"],
-          [p valueForKey:@"interest"],
-          oriValue,
-          multiValue,
-          multiModify
-          );
+    JGSCLog(@"\nName = %@;"
+            "\nID NO. = %@;"
+            "\nInterest = %@"
+            "\nOri Interest = %@;"
+            "\nMulti Interest = %@"
+            "\nModify Interest = %@",
+            [p valueForKey:@"name"],
+            [p valueForKey:@"idNumber"],
+            [p valueForKey:@"interest"],
+            oriValue,
+            multiValue,
+            multiModify
+            );
 }
 
 // KVC获取可变集合方法测试
@@ -298,19 +298,19 @@ static void * KVOContext = 0;
     NSMutableArray *multiModify = [p mutableArrayValueForKey:@"ownedBooks"];
     [multiModify addObject:@"Add Book-1"];
     
-    JGLog(@"\nName = %@;"
-          "\nID NO. = %@;"
-          "\nBook = %@"
-          "\nOri Book = %@;"
-          "\nMulti Book = %@"
-          "\nModify Book = %@",
-          [p valueForKey:@"name"],
-          [p valueForKey:@"idNumber"],
-          [p valueForKey:@"ownedBooks"],
-          oriValue,
-          multiValue,
-          multiModify
-          );
+    JGSCLog(@"\nName = %@;"
+            "\nID NO. = %@;"
+            "\nBook = %@"
+            "\nOri Book = %@;"
+            "\nMulti Book = %@"
+            "\nModify Book = %@",
+            [p valueForKey:@"name"],
+            [p valueForKey:@"idNumber"],
+            [p valueForKey:@"ownedBooks"],
+            oriValue,
+            multiValue,
+            multiModify
+            );
 }
 
 - (void)personKVCFuncCalculateFuntion {
@@ -322,17 +322,17 @@ static void * KVOContext = 0;
         [persons addObject:p];
     }
     
-    JGLog(@"\nAvg Age = %@"
-          "\nCount Age = %@"
-          "\nMax Age = %@"
-          "\nMin Age = %@"
-          "\nSum Age = %@",
-          [persons valueForKeyPath:@"@avg.age"],
-          [persons valueForKeyPath:@"@count"],
-          [persons valueForKeyPath:@"@max.age"],
-          [persons valueForKeyPath:@"@min.age"],
-          [persons valueForKeyPath:@"@sum.age"]
-          );
+    JGSCLog(@"\nAvg Age = %@"
+            "\nCount Age = %@"
+            "\nMax Age = %@"
+            "\nMin Age = %@"
+            "\nSum Age = %@",
+            [persons valueForKeyPath:@"@avg.age"],
+            [persons valueForKeyPath:@"@count"],
+            [persons valueForKeyPath:@"@max.age"],
+            [persons valueForKeyPath:@"@min.age"],
+            [persons valueForKeyPath:@"@sum.age"]
+            );
 }
 
 - (void)personKVCFuncObjectFuntion {
@@ -347,11 +347,11 @@ static void * KVOContext = 0;
     id distinctUnion = [persons valueForKeyPath:@"@distinctUnionOfObjects.name"];
     id allUnion = [persons valueForKeyPath:@"@unionOfObjects.name"];
     
-    JGLog(@"\nDistinct Union Names = <%@ : %@>"
-          "\nUnion Names = <%@ : %@>",
-          NSStringFromClass([distinctUnion class]), distinctUnion,
-          NSStringFromClass([allUnion class]), allUnion
-          );
+    JGSCLog(@"\nDistinct Union Names = <%@ : %@>"
+            "\nUnion Names = <%@ : %@>",
+            NSStringFromClass([distinctUnion class]), distinctUnion,
+            NSStringFromClass([allUnion class]), allUnion
+            );
 }
 
 - (void)personKVCFuncCollectFuntion {
@@ -369,28 +369,28 @@ static void * KVOContext = 0;
     id allUnionInterest = [persons valueForKeyPath:@"@unionOfArrays.interest"];
     //id allUnionInterestSet = [persons valueForKeyPath:@"@distinctUnionOfSets.interest"]; // Array不支持Sets操作，崩溃
     
-    JGLog(@"\nDistinct Union Array Interest = <%@ : %@>"
-          "\nUnion Array Interest = <%@ : %@>",
-          NSStringFromClass([distinctUnionInterest class]), distinctUnionInterest,
-          NSStringFromClass([allUnionInterest class]), allUnionInterest
-          );
+    JGSCLog(@"\nDistinct Union Array Interest = <%@ : %@>"
+            "\nUnion Array Interest = <%@ : %@>",
+            NSStringFromClass([distinctUnionInterest class]), distinctUnionInterest,
+            NSStringFromClass([allUnionInterest class]), allUnionInterest
+            );
     
     id distinctUnionBook = [persons valueForKeyPath:@"@distinctUnionOfArrays.ownedBooks"];
     id allUnionBook = [persons valueForKeyPath:@"@unionOfArrays.ownedBooks"];
     id allUnionBookSet = [persons valueForKeyPath:@"@distinctUnionOfSets.ownedBooks"];
     
-    JGLog(@"\nDistinct Union Array Book = <%@ : %@>"
-          "\nUnion Array Book = <%@ : %@>"
-          "\nUnion Set Book = <%@ : %@>",
-          NSStringFromClass([distinctUnionBook class]), distinctUnionBook,
-          NSStringFromClass([allUnionBook class]), allUnionBook,
-          NSStringFromClass([allUnionBookSet class]), allUnionBookSet
-          );
+    JGSCLog(@"\nDistinct Union Array Book = <%@ : %@>"
+            "\nUnion Array Book = <%@ : %@>"
+            "\nUnion Set Book = <%@ : %@>",
+            NSStringFromClass([distinctUnionBook class]), distinctUnionBook,
+            NSStringFromClass([allUnionBook class]), allUnionBook,
+            NSStringFromClass([allUnionBookSet class]), allUnionBookSet
+            );
 }
 
 #pragma mark - KVO
 - (void)bookKVOObserverAddRemoveFunction {
-
+    
     // 成员对象，添加、移除测试
     if (!memberBook) {
         
@@ -399,7 +399,7 @@ static void * KVOContext = 0;
         [memberBook addObserver:self forKeyPath:@"name" options:(NSKeyValueObservingOptionPrior | NSKeyValueObservingOptionOld | NSKeyValueObservingOptionNew) context:(void *)&PrivateKVOContext];
         [memberBook addObserver:self forKeyPath:@"name" options:(NSKeyValueObservingOptionPrior | NSKeyValueObservingOptionOld | NSKeyValueObservingOptionNew) context:KVOContext];
     }
-
+    
     // 属性对象，添加、移除测试
     if (!_propertyBook) {
         
@@ -429,11 +429,11 @@ static void * KVOContext = 0;
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
-
+    
     // 必须有自定义处理，如直接调用 [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];则崩溃
     if (context == (void *)&PrivateKVOContext || context == KVOContext) {
         
-        NSLog(@"%zd, %zd", context == (void *)&PrivateKVOContext, context == KVOContext);
+        NSLog(@"%d, %d", context == (void *)&PrivateKVOContext, context == KVOContext);
         NSLog(@"收到KVO消息 ===========>>>>>>>"
               "\n%@, %@ = %@"
               "\n\n",

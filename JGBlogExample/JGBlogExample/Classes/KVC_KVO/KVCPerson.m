@@ -66,17 +66,17 @@
     id value = [super valueForKey:key];
     if ([key isEqualToString:@"interestCollect"]) {
         
-        JGLog(@"KVC get search : %@"
-              "\n_interestCollect : %@"
-              "\n_isInterestCollect : %@"
-              "\ninterestCollect : %@"
-              "\nisInterestCollect : %@",
-              key,
-              _interestCollect,
-              _isInterestCollect,
-              interestCollect,
-              isInterestCollect
-              );
+        JGSCLog(@"KVC get search : %@"
+                "\n_interestCollect : %@"
+                "\n_isInterestCollect : %@"
+                "\ninterestCollect : %@"
+                "\nisInterestCollect : %@",
+                key,
+                _interestCollect,
+                _isInterestCollect,
+                interestCollect,
+                isInterestCollect
+                );
     }
     
     return value;
@@ -84,7 +84,7 @@
 
 - (id)valueForUndefinedKey:(NSString *)key {
     
-    JGLog(@"默认实现是抛出异常，重写以做错误处理 => %@", key);
+    JGSCLog(@"默认实现是抛出异常，重写以做错误处理 => %@", key);
     return nil;
 }
 
@@ -92,45 +92,45 @@
     
     NSError *error = nil;
     if (![self validateValue:&value forKey:key error:&error]) {
-        JGLog(@"验证失败 ： %@", error);
+        JGSCLog(@"验证失败 ： %@", error);
         return;
     }
     
     [super setValue:value forKey:key];
     if ([key isEqualToString:@"nameSetString"]) {
         
-        JGLog(@"KVC set search : %@"
-              "\n_nameSetString : %@"
-              "\n_isNameSetString : %@"
-              "\nnameSetString : %@"
-              "\nisNameSetString : %@",
-              key,
-              _nameSetString,
-              _isNameSetString,
-              nameSetString,
-              isNameSetString
-              );
+        JGSCLog(@"KVC set search : %@"
+                "\n_nameSetString : %@"
+                "\n_isNameSetString : %@"
+                "\nnameSetString : %@"
+                "\nisNameSetString : %@",
+                key,
+                _nameSetString,
+                _isNameSetString,
+                nameSetString,
+                isNameSetString
+                );
     }
 }
 
 - (void)setValue:(id)value forUndefinedKey:(NSString *)key {
     
-    JGLog(@"默认实现是抛出异常，重写以做错误处理 => <%@ : %@>", key, value);
+    JGSCLog(@"默认实现是抛出异常，重写以做错误处理 => <%@ : %@>", key, value);
 }
 
 - (void)setNilValueForKey:(NSString *)key {
     
-    JGLog(@"默认实现是抛出异常，重写以做错误处理 => %@", key);
+    JGSCLog(@"默认实现是抛出异常，重写以做错误处理 => %@", key);
 }
 
 #pragma mark - KVV
 - (BOOL)validateName:(inout NSString * _Nullable __autoreleasing *)ioValue error:(out NSError * _Nullable __autoreleasing *)outError {
     
-    JGLog(@"KVV验证 Name，必须有“KVC-”前缀");
+    JGSCLog(@"KVV验证 Name，必须有“KVC-”前缀");
     if ([*ioValue hasPrefix:@"KVC-"]) {
         return YES;
     }
-
+    
     return NO;
 }
 
@@ -143,11 +143,11 @@
      validateKey:error:方法需要针对每个Key实现对应的方法，可以见验证逻辑统一放到本方法内部进行
      */
     
-    JGLog(@"KVV验证 %@", inKey);
+    JGSCLog(@"KVV验证 %@", inKey);
     BOOL ret = YES;
     if ([inKey isEqualToString:@"name"]) {
         
-        JGLog(@"%@ 必须有“KVC-”前缀", inKey);
+        JGSCLog(@"%@ 必须有“KVC-”前缀", inKey);
         NSString *name = (NSString *)(*ioValue);
         ret = [name hasPrefix:@"KVC-"];
         if (!ret) {
@@ -168,39 +168,39 @@
 - (void)setNameSetString:(NSString *)name {
     
     // 测试简直搜索响应顺序 - 1
-    JGLog(@"KVC set nameSetString");
+    JGSCLog(@"KVC set nameSetString");
     nameSaveString = name.copy;
 }
 
 #pragma mark - KVC Get Search
 - (id)getInterestCollect {
-
+    
     // 测试简直搜索响应顺序 - 1
-    JGLog(@"KVC get interestCollect");
+    JGSCLog(@"KVC get interestCollect");
     return interestSaveArray;
     //return interestSaveSet;
 }
 
 - (id)interestCollect {
-
+    
     // 测试简直搜索响应顺序 - 2
-    JGLog(@"KVC get interestCollect");
+    JGSCLog(@"KVC get interestCollect");
     return interestSaveArray;
     //return interestSaveSet;
 }
 
 - (id)isInterestCollect {
-
+    
     // 测试简直搜索响应顺序 - 3
-    JGLog(@"KVC get interestCollect");
+    JGSCLog(@"KVC get interestCollect");
     return interestSaveArray;
     //return interestSaveSet;
 }
 
 - (id)_interestCollect {
-
+    
     // 测试简直搜索响应顺序 - 4
-    JGLog(@"KVC get interestCollect");
+    JGSCLog(@"KVC get interestCollect");
     return interestSaveArray;
     //return interestSaveSet;
 }

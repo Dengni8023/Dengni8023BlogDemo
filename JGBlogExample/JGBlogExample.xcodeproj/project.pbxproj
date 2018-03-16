@@ -16,10 +16,10 @@
 		D4853804204F961000795173 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4853803204F961000795173 /* Assets.xcassets */; };
 		D485380A204F961000795173 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D4853809204F961000795173 /* main.m */; };
 		D4853811204FBD5100795173 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4853810204FBD5100795173 /* LaunchScreen.storyboard */; };
-		D4853814204FC9BC00795173 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4853813204FC9BC00795173 /* TableViewController.m */; };
 		D4C975F02058B9E100581409 /* Book.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C975EF2058B9E100581409 /* Book.m */; };
 		D4C975F32058BCF400581409 /* KVOBook.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C975F22058BCF400581409 /* KVOBook.m */; };
-		D4C975F62059228700581409 /* ExampleTableData.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C975F52059228700581409 /* ExampleTableData.m */; };
+		D4D1D817205F4F1300AA4B61 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4D1D816205F4F1300AA4B61 /* ViewController.m */; };
+		D4D1D81A205F4F5800AA4B61 /* JGDemoTableData.m in Sources */ = {isa = PBXBuildFile; fileRef = D4D1D819205F4F5800AA4B61 /* JGDemoTableData.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,14 +38,14 @@
 		D4853808204F961000795173 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4853809204F961000795173 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D4853810204FBD5100795173 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		D4853812204FC9BC00795173 /* TableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
-		D4853813204FC9BC00795173 /* TableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		D4C975EE2058B9E100581409 /* Book.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Book.h; sourceTree = "<group>"; };
 		D4C975EF2058B9E100581409 /* Book.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Book.m; sourceTree = "<group>"; };
 		D4C975F12058BCF400581409 /* KVOBook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVOBook.h; sourceTree = "<group>"; };
 		D4C975F22058BCF400581409 /* KVOBook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVOBook.m; sourceTree = "<group>"; };
-		D4C975F42059228700581409 /* ExampleTableData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExampleTableData.h; sourceTree = "<group>"; };
-		D4C975F52059228700581409 /* ExampleTableData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExampleTableData.m; sourceTree = "<group>"; };
+		D4D1D815205F4F1300AA4B61 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		D4D1D816205F4F1300AA4B61 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D4D1D818205F4F5800AA4B61 /* JGDemoTableData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JGDemoTableData.h; sourceTree = "<group>"; };
+		D4D1D819205F4F5800AA4B61 /* JGDemoTableData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JGDemoTableData.m; sourceTree = "<group>"; };
 		D6CC9056BF1B459F77163BFC /* Pods-JGBlogExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JGBlogExample.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-JGBlogExample/Pods-JGBlogExample.debug.xcconfig"; sourceTree = "<group>"; };
 		DBEBD60927313FAA3F88DBCF /* Pods-JGBlogExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JGBlogExample.release.xcconfig"; path = "../Pods/Target Support Files/Pods-JGBlogExample/Pods-JGBlogExample.release.xcconfig"; sourceTree = "<group>"; };
 		FC5E2554BF3F985C013AE20A /* Pods_JGBlogExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JGBlogExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,8 +79,8 @@
 				D4C975EF2058B9E100581409 /* Book.m */,
 				D460BB8020561E3700C2A568 /* Company.h */,
 				D460BB8120561E3700C2A568 /* Company.m */,
-				D4C975F42059228700581409 /* ExampleTableData.h */,
-				D4C975F52059228700581409 /* ExampleTableData.m */,
+				D4D1D818205F4F5800AA4B61 /* JGDemoTableData.h */,
+				D4D1D819205F4F5800AA4B61 /* JGDemoTableData.m */,
 				D460BB7920561A6600C2A568 /* Person.h */,
 				D460BB7A20561A6600C2A568 /* Person.m */,
 			);
@@ -111,8 +111,8 @@
 				D4853815204FC9D600795173 /* Classes */,
 				D48537FA204F961000795173 /* AppDelegate.h */,
 				D48537FB204F961000795173 /* AppDelegate.m */,
-				D4853812204FC9BC00795173 /* TableViewController.h */,
-				D4853813204FC9BC00795173 /* TableViewController.m */,
+				D4D1D815205F4F1300AA4B61 /* ViewController.h */,
+				D4D1D816205F4F1300AA4B61 /* ViewController.m */,
 				D4853803204F961000795173 /* Assets.xcassets */,
 				D4853808204F961000795173 /* Info.plist */,
 				D4853810204FBD5100795173 /* LaunchScreen.storyboard */,
@@ -163,7 +163,6 @@
 				D48537F4204F961000795173 /* Frameworks */,
 				D48537F5204F961000795173 /* Resources */,
 				2308719A2CD312AD85BF3989 /* [CP] Embed Pods Frameworks */,
-				3C53EBA6B5FD453C3E13B5DE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -180,7 +179,7 @@
 		D48537EF204F961000795173 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = MeiJigao;
 				TargetAttributes = {
 					D48537F6204F961000795173 = {
@@ -227,40 +226,15 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/../Pods/Target Support Files/Pods-JGBlogExample/Pods-JGBlogExample-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/FLAnimatedImage/FLAnimatedImage.framework",
-				"${BUILT_PRODUCTS_DIR}/JGAlertController/JGAlertController.framework",
-				"${BUILT_PRODUCTS_DIR}/JGNetworkReachability/JGNetworkReachability.framework",
-				"${BUILT_PRODUCTS_DIR}/JGPhotoBrowser/JGPhotoBrowser.framework",
 				"${BUILT_PRODUCTS_DIR}/JGSourceBase/JGSourceBase.framework",
-				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FLAnimatedImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JGAlertController.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JGNetworkReachability.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JGPhotoBrowser.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JGSourceBase.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-JGBlogExample/Pods-JGBlogExample-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		3C53EBA6B5FD453C3E13B5DE /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-JGBlogExample/Pods-JGBlogExample-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A2951B0C4343D4F36D24F04F /* [CP] Check Pods Manifest.lock */ = {
@@ -289,14 +263,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				D460BB782056170200C2A568 /* KVC_KVOViewController.m in Sources */,
-				D4C975F62059228700581409 /* ExampleTableData.m in Sources */,
 				D485380A204F961000795173 /* main.m in Sources */,
 				D4C975F32058BCF400581409 /* KVOBook.m in Sources */,
+				D4D1D81A205F4F5800AA4B61 /* JGDemoTableData.m in Sources */,
 				D460BB7B20561A6600C2A568 /* Person.m in Sources */,
+				D4D1D817205F4F1300AA4B61 /* ViewController.m in Sources */,
 				D460BB7E20561E0200C2A568 /* KVCPerson.m in Sources */,
 				D4C975F02058B9E100581409 /* Book.m in Sources */,
 				D48537FC204F961000795173 /* AppDelegate.m in Sources */,
-				D4853814204FC9BC00795173 /* TableViewController.m in Sources */,
 				D460BB8220561E3700C2A568 /* Company.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -318,6 +292,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -325,6 +300,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -373,6 +349,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -380,6 +357,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

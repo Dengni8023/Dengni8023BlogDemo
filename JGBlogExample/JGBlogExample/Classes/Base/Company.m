@@ -25,7 +25,7 @@
 
 - (void)dealloc {
     
-    JGLog(@"<%@: %p>", NSStringFromClass([self class]), self);
+    JGSCLog(@"<%@: %p>", NSStringFromClass([self class]), self);
 }
 
 #pragma mark - End
