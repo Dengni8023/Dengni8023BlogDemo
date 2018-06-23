@@ -13,7 +13,7 @@ platform :ios, '9.0'
 target "JGBlogExample" do
     
     # JGSourceBase
-    pod 'JGSourceBase', "0.0.5"
+    pod 'JGSourceBase', "~> 0.1.0"
     
     # project
     project "JGBlogExample/JGBlogExample.xcodeproj"
